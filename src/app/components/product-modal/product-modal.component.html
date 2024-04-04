@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="card rounded-5 p-5">
+    <div class="card-body">
+      <div class="text-end mb-3">
+        <i (click)="dialogRef.close()" class="bi-x-lg" style="cursor: pointer; font-size: 30px;"></i>
+      </div>
+      <div class="row" id="scrollable_div">
+        <div class="col-lg-6">
+          <img src="{{ imgUrl }}" alt="" class="w-100">
+
+          <div class="row">
+            @for (imgUrl of product.imageUrls; track imgUrl) {
+              <div class="col">
+                <img src="{{ imgUrl }}" alt="" class="img-fluid" (click)="showImage(imgUrl)">
+              </div>
+            }
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <h1 class="h1 fw-bold" style="font-weight: 900;">{{ product.name }}</h1>
+          <p>
+            {{ product.description }}
+          </p>
+
+          <p>
+            {{ product.description }}
+          </p>
+
+          <div class="">
+            <app-button [label]="'Acheter'" [type]="'btn-blue'" [icon]="'cart'" [size]="50" class="align-middle me-md-2 d-md-inline d-sm-block"></app-button>
+            <app-product-favorite-icon class="align-middle" [favorite]="product.favorite" [id]="product.id"></app-product-favorite-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<i
+  class="fs-2 text-end"
+  #icon
+  (click)="isFavorite() ? removeFavorite(id) : addFavorite(id)"
+  [class.bi-heart]="!favoriteStatus"
+  [class.bi-heart-fill]="favoriteStatus"
+
+  (mouseenter)="onMouseEnterOnIcon()"
+  (mouseleave)="onMouseLeaveOnIcon()"
+
+  style="color: #CD0000; font-weight: lighter">
+</i>

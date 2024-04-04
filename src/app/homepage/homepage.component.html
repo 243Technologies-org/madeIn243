@@ -1,0 +1,373 @@
+<app-header/>
+
+<div class="banner" style="margin-top: 8rem !important;">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 col-md-12 d-flex align-items-center text-lg-start text-sm-center">
+        Des trésors régionaux à portée de clic.
+      </div>
+      <div class="col-lg-7 col-md-12">
+        <img ngSrc="./assets/bn31.png" alt="" class="img-fluid" height="845" width="1018">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section categories p-5 bg-grey">
+  <div class="container">
+    <h1 class="h1">Trouvez les produits par catégorie</h1>
+    <p class="mb-5">Use these paragraphs to focus on the topic in the headline. Make sure you keep it short and attractive.</p>
+
+    <div class="row">
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="box d-flex align-items-center justify-content-center" style="background-image: url(/assets/bio.png);">
+          <span>Produits bio</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="box d-flex align-items-center justify-content-center" style="background-image: url(/assets/style.png);">
+          <span>Style</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="box d-flex align-items-center justify-content-center" style="background-image: url(/assets/tech.png);">
+          <span>Tech</span>
+        </div>
+      </div>
+      <div class="col-lg-3 col-md-6 mb-3">
+        <div class="box d-flex align-items-center justify-content-center" style="background-image: url(/assets/innovant.png);">
+          <span>Innovant</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section products p-5 bg-white">
+  <div class="container">
+    <h1 class="h1">Découverez les meilleurs des produits locaux</h1>
+    <p class="mb-5">Use these paragraphs to focus on the topic in the headline. Make sure you keep it short and attractive.</p>
+    <div class="d-flex justify-content-end mt-2 mb-4">
+      <app-button class="" [label]="'Tous les produits'" [type]="'btn-blue'"></app-button>
+    </div>
+
+    <div class="row">
+      <owl-carousel-o [options]="owlOptions">
+        <ng-container *ngFor="let product of products">
+          <ng-template carouselSlide>
+            <app-product-card [product]="product"></app-product-card>
+          </ng-template>
+        </ng-container>
+      </owl-carousel-o>
+    </div>
+  </div>
+</div>
+
+<div class="section women py-5 bg-white">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-8 px-0 mb-2" style="padding-right: 15px!important;">
+        <img src="./assets/Group24.png" alt="" class="img-fluid w-100">
+      </div>
+      <div class="col-lg-3">
+        <h5 class="fw-bold mb-4" style="font-size: 28px;">Nous aidons les jeunes femme à prospérer !</h5>
+        <h3 class="fw-bold mb-4" style="color: #005BAE; font-size: 40px;">Nonummy Cum Convallis</h3>
+        <p class="mb-4">Elementum tristique mi montes nibh desertunt magna. Netus assumenda molestias nisi porro, nascetur molas. Habitant urna fugiat wisi nceptos sodales magna. Molestie suspendisse faucibus justo! Sollicitudin tempore unde, dolorem, blanditiis a nam beatae nihil bibendum, taciti.</p>
+        <p>Elementum tristique mi montes nibh desertunt magna. Netus assumenda molestias nisi porro, .</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section call-to-action p-5 bg-white">
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 d-flex justify-content-center align-items-center">
+        <div>
+          <h1 class="fw-bold" style="font-size: 64px;">
+            Achetez En Ligne Maintenant Et Obtenez 10 %
+            <br>De Réduction !
+          </h1>
+          <p class="fw-lighter" style="font-size: 26px;">Curae quia enim aute, consequatur, eius quaerat excepteur fames pharetra.
+          </p>
+          <app-button [label]="'Acheter maintenant'" [icon]="'cart'" [type]="'btn-green'"></app-button>
+        </div>
+      </div>
+      <div class="col-lg-7">
+        <img ngSrc="./assets/Group22.png" alt="" class="img-fluid" height="2700" width="2700">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section statistics p-5 bg-blue">
+  <div class="container py-3">
+    <div class="row">
+      <div class="col-lg-3">
+        <h1 class="fw-bold text-yellow text-center" style="font-size: 64px; font-weight: 900;">+<span id="partners">37</span></h1>
+        <p class="text-center text-white" style="font-size: 18px; font-weight: 400;">Partenaires</p>
+      </div>
+      <div class="col-lg-3">
+        <h1 class="fw-bold text-yellow text-center" style="font-size: 64px; font-weight: 900;">+<span id="socials">15</span></h1>
+        <p class="text-center text-white" style="font-size: 18px; font-weight: 400;">Socials link</p>
+      </div>
+      <div class="col-lg-3">
+        <h1 class="fw-bold text-yellow text-center" style="font-size: 64px; font-weight: 900;">+<span id="startup">29</span></h1>
+        <p class="text-center text-white" style="font-size: 18px; font-weight: 400;">Startup <br> Accompagner</p>
+      </div>
+      <div class="col-lg-3">
+        <h1 class="fw-bold text-yellow text-center" style="font-size: 64px; font-weight: 900;">+<span id="products">500</span></h1>
+        <p class="text-center text-white" style="font-size: 18px; font-weight: 400;">Produits Promus</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section why-us" style="background-image: url(/assets/Group23.png); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 175px; padding-bottom: 175px; background-color: rgba(0, 0, 0, 0.55); background-blend-mode: darken; color: white;">
+  <div class="container">
+    <h4 class="text-center text-yellow" style="font-size: 70px; margin-bottom: 50px; font-weight: 900;">Pourquoi nous choisir?</h4>
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="d-flex justify-content-around">
+          <div class="">
+            <i class="bi-check-circle-fill" style="font-size: 40px; position: relative; top: -10px;"></i>
+          </div>
+          <div class="px-3">
+            <h4 style="font-size: 30px; font-weight: 900" class="text-yellow">Valeur</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Proin nullam id erat diam suspendisse feugiat tortor vel vulputate. Erat ut rutrum vulputate purus at volutpat ullamcorper. Dignissim ultrices elementum sit amet volutpat volutpat vulputate a. Donec ultrices eros aliquet laoreet massa enim fusce.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="d-flex justify-content-around">
+          <div class="">
+            <i class="bi-check-circle-fill" style="font-size: 40px; position: relative; top: -10px;"></i>
+          </div>
+          <div class="px-3">
+            <h4 style="font-size: 30px; font-weight: 900" class="text-yellow">Valeur</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Proin nullam id erat diam suspendisse feugiat tortor vel vulputate. Erat ut rutrum vulputate purus at volutpat ullamcorper. Dignissim ultrices elementum sit amet volutpat volutpat vulputate a. Donec ultrices eros aliquet laoreet massa enim fusce.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="d-flex justify-content-around">
+          <div class="">
+            <i class="bi-check-circle-fill" style="font-size: 40px; position: relative; top: -10px;"></i>
+          </div>
+          <div class="px-3">
+            <h4 style="font-size: 30px; font-weight: 900" class="text-yellow">Valeur</h4>
+            <p>
+              Lorem ipsum dolor sit amet consectetur. Proin nullam id erat diam suspendisse feugiat tortor vel vulputate. Erat ut rutrum vulputate purus at volutpat ullamcorper. Dignissim ultrices elementum sit amet volutpat volutpat vulputate a. Donec ultrices eros aliquet laoreet massa enim fusce.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section win-with-us bg-white" style="background-image: url(/assets/background.png); background-repeat: no-repeat; background-size: cover; background-position: center; padding-top: 150px; padding-bottom: 150px;">
+  <div class="container">
+    <div class="row d-flex justify-content-between align-items-center">
+      <div class="col-lg-5">
+        <h1>Faites vous decouvrir!</h1>
+        <p>Lorem ipsum dolor sit amet consectetur. Id velit congue mauris varius nisi adipiscing turpis. Consectetur commodo facilisis bibendum aliquam nec. Morbi nec vulputate lacus libero. Non ac scelerisque nulla massa iaculis pharetra urna lorem rhoncus.</p>
+      </div>
+<!--      <div class="col-lg-7">-->
+<!--        <div class="border w-100 text-center d-flex align-items-center justify-content-center" style="height: 380px; border-radius: 25px;background-image: url(/assets/mel.png); background-repeat: no-repeat; background-size: cover; background-color: rgba(0, 0, 0, 0.1); background-blend-mode: darken; background-position: top;">-->
+<!--          <img src="./assets/group6.png" alt="" width="180" height="180">-->
+<!--          <a href="" class="play-btn"></a>-->
+<!--        </div>-->
+<!--      </div>-->
+
+      <div class="col-lg-7 position-relative align-self-start order-lg-last order-first videopopup">
+        <img src="./assets/mel.png" class="img-fluid" alt="">
+        <a href="https://www.youtube.com/watch?v=LXb3EKWsInQ" class="glightbox play-btn"></a>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section ready-for-boost" style="">
+  <div class="text-center container">
+    <h4 class="text-white" style="font-size: 70px; margin-bottom: 0; font-weight: 900;">Prêt à booster votre activité?</h4>
+    <p style="font-size: 30px; margin-bottom: 50px; font-weight: 500;">Rejoignez-nous maintenant !</p>
+    <a href="#" class="btn action">Rejoignez-nous</a>
+  </div>
+</div>
+
+<div class="section partners p-5 bg-white">
+  <div class="container">
+    <h3 class="text-center fw-bold mb-5" style="font-weight: 900; font-size: 50px">Ils nous accompagnent</h3>
+
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-4">
+        <img src="./assets/partners/logo-243.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="./assets/partners/logo-dgi.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-3 col-md-4">
+        <img src="./assets/partners/presidence-rdc.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-3 col-md-4 d-flex align-items-center">
+        <img src="./assets/partners/tele50.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-3 col-md-4 d-flex align-items-center">
+        <img src="./assets/partners/Rawbank_logo.png" class="img-fluid" alt="">
+      </div>
+      <div class="col-lg-3 col-md-4 d-flex align-items-center">
+        <img src="./assets/partners/vodacom.png" class="img-fluid" alt="">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section testimonies">
+  <div class="container">
+    <h3 class="text-center text-yellow" style="font-size: 70px; margin-bottom: 50px; font-weight: 900;">Ce qu’ils disent de nous</h3>
+
+    <div class="row">
+      <div class="col-lg-4">
+        <div class="card px-2 py-5">
+          <div class="card-body">
+            <div class="text-center fw-light mb-4">
+              Lorem ipsum dolor sit amet consectetur. Pretium amet sed metus fames. In volutpat nisi ante quam ante egestas. Ac facilisi nibh urna ornare nulla hendrerit urna turpis. Faucibus quam nisl hendrerit sit imperdiet adipiscing. Integer vestibulum suspendisse tortor proin nullam magna tincidunt. Purus purus at ac aenean. Ultrices quis risus nunc mollis congue ut. At enim quam nec egestas. Neque sit tristique risus nisl dolor.
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="./assets/avatar.png" class="rounded-circle" alt="">
+              </div>
+              <div class="col-sm-6 py-0 my-0 px-0 mx-0 text-center d-flex align-items-center">
+                <div>
+                  <p class="py-0 my-0 px-0 mx-0">Philippe M.</p>
+                  <p class="py-0 my-0 px-0 mx-0">CEO Mgr Group</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card px-2 py-5">
+          <div class="card-body">
+            <div class="text-center fw-light mb-4">
+              Lorem ipsum dolor sit amet consectetur. Pretium amet sed metus fames. In volutpat nisi ante quam ante egestas. Ac facilisi nibh urna ornare nulla hendrerit urna turpis. Faucibus quam nisl hendrerit sit imperdiet adipiscing. Integer vestibulum suspendisse tortor proin nullam magna tincidunt. Purus purus at ac aenean. Ultrices quis risus nunc mollis congue ut. At enim quam nec egestas. Neque sit tristique risus nisl dolor.
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="./assets/avatar.png" class="rounded-circle" alt="">
+              </div>
+              <div class="col-sm-6 py-0 my-0 px-0 mx-0 text-center d-flex align-items-center">
+                <div>
+                  <p class="py-0 my-0 px-0 mx-0">Philippe M.</p>
+                  <p class="py-0 my-0 px-0 mx-0">CEO Mgr Group</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-lg-4">
+        <div class="card px-2 py-5">
+          <div class="card-body">
+            <div class="text-center fw-light mb-4">
+              Lorem ipsum dolor sit amet consectetur. Pretium amet sed metus fames. In volutpat nisi ante quam ante egestas. Ac facilisi nibh urna ornare nulla hendrerit urna turpis. Faucibus quam nisl hendrerit sit imperdiet adipiscing. Integer vestibulum suspendisse tortor proin nullam magna tincidunt. Purus purus at ac aenean. Ultrices quis risus nunc mollis congue ut. At enim quam nec egestas. Neque sit tristique risus nisl dolor.
+            </div>
+            <div class="row">
+              <div class="col-sm-4">
+                <img src="./assets/avatar.png" class="rounded-circle" alt="">
+              </div>
+              <div class="col-sm-6 py-0 my-0 px-0 mx-0 text-center d-flex align-items-center">
+                <div>
+                  <p class="py-0 my-0 px-0 mx-0">Philippe M.</p>
+                  <p class="py-0 my-0 px-0 mx-0">CEO Mgr Group</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="section faq py-5 mb-5">
+  <div class="container">
+    <h3 class="text-center" style="font-size: 70px; margin-bottom: 50px; font-weight: 900;">As-tu des questions ?</h3>
+
+<!--    <div class="row mb-5">-->
+<!--      <div class="col-lg-7 mx-auto">-->
+<!--        <div class="accordion accordion-flush" id="accordionExample">-->
+<!--          <div class="accordion-item">-->
+<!--            <h2 class="accordion-header">-->
+<!--              <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">-->
+<!--                Accordion Item #1-->
+<!--              </button>-->
+<!--            </h2>-->
+<!--            <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">-->
+<!--              <div class="accordion-body">-->
+<!--                <strong>This is the first item's accordion body.</strong> It is shown by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="accordion-item">-->
+<!--            <h2 class="accordion-header">-->
+<!--              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">-->
+<!--                Accordion Item #2-->
+<!--              </button>-->
+<!--            </h2>-->
+<!--            <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionExample">-->
+<!--              <div class="accordion-body">-->
+<!--                <strong>This is the second item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--          <div class="accordion-item">-->
+<!--            <h2 class="accordion-header">-->
+<!--              <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">-->
+<!--                Accordion Item #3-->
+<!--              </button>-->
+<!--            </h2>-->
+<!--            <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionExample">-->
+<!--              <div class="accordion-body">-->
+<!--                <strong>This is the third item's accordion body.</strong> It is hidden by default, until the collapse plugin adds the appropriate classes that we use to style each element. These classes control the overall appearance, as well as the showing and hiding via CSS transitions. You can modify any of this with custom CSS or overriding our default variables. It's also worth noting that just about any HTML can go within the <code>.accordion-body</code>, though the transition does limit overflow.-->
+<!--              </div>-->
+<!--            </div>-->
+<!--          </div>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+
+    <div class="row mb-5">
+      <div class="col-lg-7 mx-auto">
+        <app-accordion></app-accordion>
+      </div>
+    </div>
+
+
+    <h3 class="text-center" style="font-size: 70px; margin-bottom: 50px; font-weight: 900;">Suivez-nous sur </h3>
+
+    <div class="row text-center">
+      <div class="col-lg-3 col-md-4 d-flex justify-content-center align-items-center">
+        <img src="./assets/socials/youtube.png" class="img-fluid-" alt="" width="150" height="150">
+      </div>
+      <div class="col-lg-3 col-md-4 d-flex justify-content-center align-items-center">
+        <img src="./assets/socials/instagram.png" class="img-flu-id" alt="" width="150" height="150">
+      </div>
+      <div class="col-lg-3 col-md-4 d-flex justify-content-center align-items-center">
+        <img src="./assets/socials/facebook.png" class="img-flui-d" alt="" width="150" height="150">
+      </div>
+      <div class="col-lg-3 col-md-4 d-flex justify-content-center align-items-center">
+        <img src="./assets/socials/twitter.png" class="img-fluid-" alt="" width="150" height="150">
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<app-footer/>

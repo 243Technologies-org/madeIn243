@@ -1,0 +1,22 @@
+<div class="card shadow-sm m-2">
+<!--  <img src="..." class="card-img-top" alt="...">-->
+  <div class="card-body">
+    <div class="card-text text-center">
+      <p class="card-title text-end mb-0">
+        <app-product-favorite-icon [favorite]="product.favorite" [id]="product.id"></app-product-favorite-icon>
+      </p>
+      <img
+        src="{{ imageUrl }}" alt=""
+        class="img-fluid w-auto d-inline-block"
+        #img
+        (click)="showProductModal()"
+        (mouseenter)="toggleImage(img)"
+        (mouseleave)="toggleImage(img)"
+      />
+      <h5 class="h5 fw-bold">{{ product.name }}</h5>
+      <p>Produit par: {{ product.productBy }}</p>
+      <h4 class="fw-bold price">{{ product.price }}Fc</h4>
+    </div>
+    <app-button [label]="'Acheter'" [type]="'btn-blue'" [icon]="'cart'" [size]="100"></app-button>
+  </div>
+</div>

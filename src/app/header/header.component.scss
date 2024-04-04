@@ -1,0 +1,23 @@
+
+.nav-item a.nav-link {
+  padding: 20px;
+
+  &.active {
+    color: #0080FF !important;
+  }
+
+  &.action {
+    border: solid 1px #CD0000;
+    border-radius: 0 20px 20px 20px;
+    background: #CD0000;
+    color: white;
+    font-size: 15px;
+
+    &:hover {
+      border: solid 1px #F7D617;
+      background: #F7D617;
+      color: black;
+    }
+  }
+}
+
